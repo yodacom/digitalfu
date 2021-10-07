@@ -2,5 +2,33 @@
   "cSpell.enableFiletypes": [
     "prisma",
     "r"
+  ],
+  "cSpell.words": [
+    "anser",
+    "anymatch",
+    "autoincrement",
+    "brorand",
+    "caniuse",
+    "colorette",
+    "commondir",
+    "datasource",
+    "depd",
+    "digitalfreeuniverity",
+    "stylis",
+    "toidentifier",
+    "trimend",
+    "trimstart",
+    "watchpack",
+    "webidl",
+    "yocto"
+  ],
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/objects",
+    ".vscode",
+    ".vscode-insiders",
+    "package.json"
   ]
 }
