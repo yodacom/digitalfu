@@ -1,27 +1,18 @@
-// import CourseList from 'components/courseList'
-import { getCourses } from '../utils/db'
+import { useUser } from '@auth0/nextjs-auth0';
 
-const Index = ({courses}) => {
-return (
-  <div>
-    <h1> Courses </h1>
-    <pre>
-      {
-        JSON.stringify(courses, null, 2)
-      }
-    </pre>
-  </div>
-  )
-}
-// component declaration
-export const getStaticProps = async () => {
-  const data = await getCourses();
+const Home = () => {
+  const { user, error, isLoading } = useUser();
 
-  return {
-    props: {
-      courses: JSON.parse(JSON.stringify(data)),
-    },
-  }
-}
+  if(isLoading) return <div> Loading ... </div>;
+  if ( error ) return <div>{error.message}</div>;
+  if (user) {
+    return (
+      <div>
+        Welcome {user.name} <a href="/api/auth/logout">Logout</a>
+      </div>
+    );
+  };
+return <a href="/api/auth/login">Login</a>;
+};
 
-export default Index;
+export default Home

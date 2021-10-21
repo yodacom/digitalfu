@@ -4,7 +4,8 @@
   "description": "digital free university",
   "main": "index.js",
   "dependencies": {
-    "@prisma/client": "^3.2.0",
+    "@auth0/nextjs-auth0": "^1.5.0",
+    "@prisma/client": "^3.2.1",
     "anser": "^1.4.9",
     "ansi-regex": "^5.0.1",
     "ansi-styles": "^3.2.1",
@@ -231,7 +232,7 @@
   "devDependencies": {
     "autoprefixer": "^10.3.7",
     "postcss": "^8.3.9",
-    "prisma": "^3.2.0",
+    "prisma": "^3.2.1",
     "tailwindcss": "^2.2.16"
   },
   "scripts": {
